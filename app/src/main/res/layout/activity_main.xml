@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.android.courtcounter.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:scaleType="fitEnd"
+            android:src="@drawable/basketball" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="16dp"
+                    android:text="@string/home"
+                    android:textColor="#616161"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/homeScoreTextView"
+                    style="@style/scoreTextViewStyle" />
+
+                <TextView
+                    android:id="@+id/homeFoulsTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="16dp"
+                    android:text="@string/fouls"
+                    android:textColor="#616161"
+                    android:textSize="14sp" />
+
+                <Button
+                    style="@style/defaultButton"
+                    android:onClick="homePlus3Points"
+                    android:text="@string/plus3Points" />
+
+                <Button
+                    style="@style/defaultButton"
+                    android:onClick="homePlus2Points"
+                    android:text="@string/plus2Points" />
+
+                <Button
+                    style="@style/defaultButton"
+                    android:onClick="homeFreeThrow"
+                    android:text="@string/freeThrow" />
+
+                <Button
+                    style="@style/defaultButton"
+                    android:onClick="homeAddFoul"
+                    android:text="@string/addFoul" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="16dp"
+                    android:text="@string/visitor"
+                    android:textColor="#616161"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/visitorScoreTextView"
+                    style="@style/scoreTextViewStyle" />
+
+                <TextView
+                    android:id="@+id/visitorFoulsTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="16dp"
+                    android:text="@string/fouls"
+                    android:textColor="#616161"
+                    android:textSize="14sp" />
+
+                <Button
+                    style="@style/defaultButton"
+                    android:onClick="visitorPlus3Points"
+                    android:text="@string/plus3Points" />
+
+                <Button
+                    style="@style/defaultButton"
+                    android:onClick="visitorPlus2Points"
+                    android:text="@string/plus2Points" />
+
+                <Button
+                    style="@style/defaultButton"
+                    android:onClick="visitorFreeThrow"
+                    android:text="@string/freeThrow" />
+
+                <Button
+                    style="@style/defaultButton"
+                    android:onClick="visitorAddFoul"
+                    android:text="@string/addFoul" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:onClick="resetGame"
+            android:text="@string/reset" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
