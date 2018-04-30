@@ -15,7 +15,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:scaleType="fitEnd"
-            android:src="@drawable/basketball" />
+            android:src="@drawable/basketball"
+            android:contentDescription="@string/basketball_image" />
 
     </RelativeLayout>
 
@@ -35,13 +36,8 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:padding="16dp"
-                    android:text="@string/home"
-                    android:textColor="#616161"
-                    android:textSize="18sp" />
+                    style="@style/teamTextViewStyle"
+                    android:text="@string/home" />
 
                 <TextView
                     android:id="@+id/homeScoreTextView"
@@ -49,13 +45,7 @@
 
                 <TextView
                     android:id="@+id/homeFoulsTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:padding="16dp"
-                    android:text="@string/fouls"
-                    android:textColor="#616161"
-                    android:textSize="14sp" />
+                    style="@style/foulTextViewStyle" />
 
                 <Button
                     style="@style/defaultButton"
@@ -92,13 +82,8 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:padding="16dp"
-                    android:text="@string/visitor"
-                    android:textColor="#616161"
-                    android:textSize="18sp" />
+                    style="@style/teamTextViewStyle"
+                    android:text="@string/visitor" />
 
                 <TextView
                     android:id="@+id/visitorScoreTextView"
@@ -106,13 +91,7 @@
 
                 <TextView
                     android:id="@+id/visitorFoulsTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:padding="16dp"
-                    android:text="@string/fouls"
-                    android:textColor="#616161"
-                    android:textSize="14sp" />
+                    style="@style/foulTextViewStyle" />
 
                 <Button
                     style="@style/defaultButton"

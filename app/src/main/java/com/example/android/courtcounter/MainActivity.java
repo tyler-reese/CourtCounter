@@ -7,45 +7,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    class Team {
-        private int score = 0;
-        private int fouls = 0;
-        private TextView scoreTextView;
-        private TextView foulsTextView;
-
-        Team(TextView scoreView, TextView foulsView) {
-            scoreTextView = scoreView;
-            foulsTextView = foulsView;
-            reset();
-        }
-
-        void plus3Points() { updateScore(score + 3); }
-
-        void plus2Points() { updateScore(score + 2); }
-
-        void freeThrow() { updateScore(score + 1); }
-
-        private void updateScore(int value) {
-            // Update the score and set the TextView
-            score = value;
-            scoreTextView.setText(String.valueOf(score));
-        }
-
-        void addFoul() { updateFouls(fouls + 1); }
-
-        private void updateFouls(int value) {
-            // Update the fouls and set the TextView
-            fouls = value;
-            String foulsText = getString(R.string.fouls) + ": " + String.valueOf(fouls);
-            foulsTextView.setText(foulsText);
-        }
-
-        void reset() {
-            updateScore(0);
-            updateFouls(0);
-        }
-    }
-
     private Team home;
     private Team visitor;
 
@@ -69,21 +30,37 @@ public class MainActivity extends AppCompatActivity {
 
     // onClick handlers for the various buttons, below
 
-    public void homePlus3Points(View v) { home.plus3Points(); }
+    public void homePlus3Points(View v) {
+        home.plusPoints(3);
+    }
 
-    public void homePlus2Points(View v) { home.plus2Points(); }
+    public void homePlus2Points(View v) {
+        home.plusPoints(2);
+    }
 
-    public void homeFreeThrow(View v) { home.freeThrow(); }
+    public void homeFreeThrow(View v) {
+        home.plusPoints(1);
+    }
 
-    public void homeAddFoul(View v) { home.addFoul(); }
+    public void homeAddFoul(View v) {
+        home.addFoul();
+    }
 
-    public void visitorPlus3Points(View v) { visitor.plus3Points(); }
+    public void visitorPlus3Points(View v) {
+        visitor.plusPoints(3);
+    }
 
-    public void visitorPlus2Points(View v) { visitor.plus2Points(); }
+    public void visitorPlus2Points(View v) {
+        visitor.plusPoints(2);
+    }
 
-    public void visitorFreeThrow(View v) { visitor.freeThrow(); }
+    public void visitorFreeThrow(View v) {
+        visitor.plusPoints(1);
+    }
 
-    public void visitorAddFoul(View v) { visitor.addFoul(); }
+    public void visitorAddFoul(View v) {
+        visitor.addFoul();
+    }
 
     public void resetGame(View v) {
         home.reset();
