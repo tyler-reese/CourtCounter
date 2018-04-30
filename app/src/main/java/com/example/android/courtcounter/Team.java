@@ -3,11 +3,11 @@ package com.example.android.courtcounter;
 import android.content.res.Resources;
 import android.widget.TextView;
 
-public class Team {
+class Team {
     private int score = 0;
     private int fouls = 0;
-    private TextView scoreTextView;
-    private TextView foulsTextView;
+    private final TextView scoreTextView;
+    private final TextView foulsTextView;
 
     Team(TextView scoreView, TextView foulsView) {
         scoreTextView = scoreView;
